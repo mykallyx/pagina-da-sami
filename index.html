@@ -289,9 +289,9 @@
               <div class="app-icon-box app-pink">📸</div>
               <span>Fotos</span>
             </div>
-            <div class="app-icon">
-              <div class="app-icon-box app-rose">💌</div>
-              <span>Carta</span>
+            <div class="app-icon" onclick="openMemory()">
+              <div class="app-icon-box app-rose">🃏</div>
+              <span>Memória</span>
             </div>
             <div class="app-icon">
               <div class="app-icon-box app-white">🎵</div>
@@ -428,6 +428,10 @@
       // Força reflow pra garantir que o navegador aplique antes de reativar a transição
       void ls.offsetHeight;
       setTimeout(() => { ls.style.transition = ''; }, 50);
+    }
+
+    function openMemory() {
+      window.open('https://mykallyx.github.io/pagina-da-sami/memory.html', '_blank');
     }
 
     // ── NAVEGAÇÃO ──
