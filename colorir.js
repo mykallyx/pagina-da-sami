@@ -521,13 +521,9 @@ function colorirSave() {
   img.src = url;
 }
 
-// Abrir ao entrar na tela
-const _oc = window.openScreen;
-window.openScreen = function(id) {
-  _oc(id);
-  if (id === 'colorir' && !document.getElementById('colorir-gallery').children.length) {
-    setTimeout(initColorir, 80);
-  }
-};
+// Inicializar ao carregar
+document.addEventListener('DOMContentLoaded', function() {
+  initColorir();
+});
 
 })(); // fim colorir
